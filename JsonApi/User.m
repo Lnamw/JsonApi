@@ -13,23 +13,34 @@
 
 - (NSString *)firstName:(NSString *)name
 {
-    NSArray *titleToRemove = @[@"Mr", @"Mrs", @"Ms", @"Dr"];
-    NSString *firstName = [[NSString alloc] initWithString:name];
+    NSArray *titleToRemove = @[@"Mr. ", @"Mrs. ", @"Ms. ", @"Dr. "];
+
+    self.fullName = name;
     
     for (int i=0; i < titleToRemove.count; i++) {
-        NSRange replaceRange = [firstName rangeOfString:titleToRemove[i]];
+        NSRange replaceRange = [self.fullName rangeOfString:titleToRemove[i]];
         
         if (replaceRange.location != NSNotFound) {
-            firstName = [firstName stringByReplacingCharactersInRange:replaceRange withString:@""];
+            self.fullName = [self.fullName stringByReplacingCharactersInRange:replaceRange withString:@""];
         }
     }
     
-    return firstName;
+    
+    NSArray *nameArray = [self.fullName componentsSeparatedByString:@" "];
+    
+    self.firstName = [nameArray objectAtIndex:0];
+
+    return self.firstName;
+    return self.fullName;
 }
 
 - (NSString *)lastName:(NSString *)name
 {
+    NSArray *nameArray = [self.fullName componentsSeparatedByString:@" "];
     
+    self.lastName = [nameArray objectAtIndex:1];
+    
+    return self.lastName;
 }
 
 

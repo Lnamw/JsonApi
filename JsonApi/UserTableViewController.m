@@ -52,8 +52,11 @@
             newUser.name = dict[@"name"];
             
             [newUser firstName:newUser.name];
+            NSLog(@"my first name is %@", newUser.firstName);
             
-            
+            [newUser lastName:newUser.name];
+            NSLog(@"my last name is %@", newUser.lastName);
+
             
             newUser.email = dict[@"email"];
             newUser.phone = dict[@"phone"];
