@@ -15,6 +15,10 @@
 		AAAA22FA1CDA577000656FA2 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22F91CDA577000656FA2 /* UserTableViewController.m */; };
 		AAAA22FF1CDA57D100656FA2 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22FE1CDA57D100656FA2 /* UserTableViewCell.m */; };
 		AAAA23031CDA59AB00656FA2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA23021CDA59AB00656FA2 /* User.m */; };
+		AAAA23061CDBD01F00656FA2 /* Adress.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA23051CDBD01F00656FA2 /* Adress.m */; };
+		AAAA23091CDBD08100656FA2 /* Geo.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA23081CDBD08100656FA2 /* Geo.m */; };
+		AAAA230C1CDBD0EB00656FA2 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA230B1CDBD0EB00656FA2 /* Company.m */; };
+		AAAA230F1CDBDD8700656FA2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA230E1CDBDD8700656FA2 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,14 @@
 		AAAA22FE1CDA57D100656FA2 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		AAAA23011CDA59AB00656FA2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AAAA23021CDA59AB00656FA2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AAAA23041CDBD01F00656FA2 /* Adress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adress.h; sourceTree = "<group>"; };
+		AAAA23051CDBD01F00656FA2 /* Adress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adress.m; sourceTree = "<group>"; };
+		AAAA23071CDBD08100656FA2 /* Geo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geo.h; sourceTree = "<group>"; };
+		AAAA23081CDBD08100656FA2 /* Geo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geo.m; sourceTree = "<group>"; };
+		AAAA230A1CDBD0EB00656FA2 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		AAAA230B1CDBD0EB00656FA2 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		AAAA230D1CDBDD8700656FA2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AAAA230E1CDBDD8700656FA2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,8 @@
 			children = (
 				AAAA22F81CDA577000656FA2 /* UserTableViewController.h */,
 				AAAA22F91CDA577000656FA2 /* UserTableViewController.m */,
+				AAAA230D1CDBDD8700656FA2 /* DetailViewController.h */,
+				AAAA230E1CDBDD8700656FA2 /* DetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -109,6 +123,12 @@
 			children = (
 				AAAA23011CDA59AB00656FA2 /* User.h */,
 				AAAA23021CDA59AB00656FA2 /* User.m */,
+				AAAA23041CDBD01F00656FA2 /* Adress.h */,
+				AAAA23051CDBD01F00656FA2 /* Adress.m */,
+				AAAA23071CDBD08100656FA2 /* Geo.h */,
+				AAAA23081CDBD08100656FA2 /* Geo.m */,
+				AAAA230A1CDBD0EB00656FA2 /* Company.h */,
+				AAAA230B1CDBD0EB00656FA2 /* Company.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -185,9 +205,13 @@
 			files = (
 				AAAA23031CDA59AB00656FA2 /* User.m in Sources */,
 				AAAA22FF1CDA57D100656FA2 /* UserTableViewCell.m in Sources */,
+				AAAA230F1CDBDD8700656FA2 /* DetailViewController.m in Sources */,
 				AAAA22FA1CDA577000656FA2 /* UserTableViewController.m in Sources */,
+				AAAA230C1CDBD0EB00656FA2 /* Company.m in Sources */,
 				AAAA22E51CDA565200656FA2 /* AppDelegate.m in Sources */,
 				AAAA22E21CDA565200656FA2 /* main.m in Sources */,
+				AAAA23061CDBD01F00656FA2 /* Adress.m in Sources */,
+				AAAA23091CDBD08100656FA2 /* Geo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,7 @@
 				AAAA22F61CDA565200656FA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

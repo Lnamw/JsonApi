@@ -8,7 +8,11 @@
 
 #import "UserTableViewController.h"
 #import "UserTableViewCell.h"
+#import "DetailViewController.h"
 #import "User.h"
+#import "Adress.h"
+#import "Geo.h"
+#import "Company.h"
 
 @interface UserTableViewController () <NSURLSessionDelegate>
 
@@ -25,9 +29,6 @@
     self.usersArray = [[NSMutableArray alloc] initWithCapacity:0];
     
     [self loadUser];
-    
-    
-    
     
 
 }
@@ -50,17 +51,32 @@
         for (NSDictionary *dict in usersList) {
             User *newUser = [[User alloc]init];
             newUser.name = dict[@"name"];
-            
             [newUser firstName:newUser.name];
-            NSLog(@"my first name is %@", newUser.firstName);
-            
             [newUser lastName:newUser.name];
-            NSLog(@"my last name is %@", newUser.lastName);
-
             
             newUser.email = dict[@"email"];
             newUser.phone = dict[@"phone"];
             
+            Adress *newAddress = [[Adress alloc]init];
+            newAddress.street = dict[@"address"][@"street"];
+            newAddress.suite = dict[@"address"][@"suite"];
+            newAddress.city = dict[@"address"][@"city"];
+            newAddress.zipcode = dict[@"address"][@"zipcode"];
+            
+            Geo *newGeo = [[Geo alloc]init];
+            newGeo.longitude = dict[@"address"][@"geo"][@"lng"];
+            newGeo.latitude = dict[@"address"][@"geo"][@"lat"];
+            
+            newAddress.fullGeo = newGeo;
+            newUser.fullAdress = newAddress;
+            
+            Company *newCompany = [[Company alloc]init];
+            newCompany.name = dict[@"company"][@"name"];
+            newCompany.catchPhrase = dict[@"company"][@"catchPhrase"];
+            newCompany.bs = dict[@"company"][@"bs"];
+            
+            newUser.companyInfo = newCompany;
+        
             [self.usersArray addObject:newUser];
         }
         
@@ -109,6 +125,33 @@
 }
 
 
+#pragma mark - Table View Delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [self performSegueWithIdentifier:@"showDetailSegue" sender:nil];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     
+     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+         
+         DetailViewController *vc = (DetailViewController *)[segue destinationViewController];
+         
+         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         
+         User *user = self.usersArray[indexPath.row];
+         vc.userSelected = user;
+         
+     }
+}
+
+
+
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -143,14 +186,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
