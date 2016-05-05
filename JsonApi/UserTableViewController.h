@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UserTableViewController.h
 //  JsonApi
 //
 //  Created by Elena Maso Willen on 04/05/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface UserTableViewController : UITableViewController
 
 @end
-

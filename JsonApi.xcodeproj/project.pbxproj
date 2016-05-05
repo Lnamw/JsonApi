@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		AAAA22E21CDA565200656FA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22E11CDA565200656FA2 /* main.m */; };
 		AAAA22E51CDA565200656FA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22E41CDA565200656FA2 /* AppDelegate.m */; };
-		AAAA22E81CDA565200656FA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22E71CDA565200656FA2 /* ViewController.m */; };
 		AAAA22EB1CDA565200656FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAA22E91CDA565200656FA2 /* Main.storyboard */; };
 		AAAA22ED1CDA565200656FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAA22EC1CDA565200656FA2 /* Assets.xcassets */; };
 		AAAA22F01CDA565200656FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAA22EE1CDA565200656FA2 /* LaunchScreen.storyboard */; };
+		AAAA22FA1CDA577000656FA2 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22F91CDA577000656FA2 /* UserTableViewController.m */; };
+		AAAA22FF1CDA57D100656FA2 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA22FE1CDA57D100656FA2 /* UserTableViewCell.m */; };
+		AAAA23031CDA59AB00656FA2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAA23021CDA59AB00656FA2 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		AAAA22E11CDA565200656FA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAAA22E31CDA565200656FA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAAA22E41CDA565200656FA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AAAA22E61CDA565200656FA2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AAAA22E71CDA565200656FA2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AAAA22EA1CDA565200656FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAAA22EC1CDA565200656FA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAAA22EF1CDA565200656FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAAA22F11CDA565200656FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAA22F81CDA577000656FA2 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
+		AAAA22F91CDA577000656FA2 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		AAAA22FD1CDA57D100656FA2 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		AAAA22FE1CDA57D100656FA2 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		AAAA23011CDA59AB00656FA2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AAAA23021CDA59AB00656FA2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +64,11 @@
 		AAAA22DF1CDA565200656FA2 /* JsonApi */ = {
 			isa = PBXGroup;
 			children = (
+				AAAA23001CDA597D00656FA2 /* Model */,
+				AAAA22FC1CDA57A000656FA2 /* Cell */,
+				AAAA22F71CDA574300656FA2 /* View Controllers */,
 				AAAA22E31CDA565200656FA2 /* AppDelegate.h */,
 				AAAA22E41CDA565200656FA2 /* AppDelegate.m */,
-				AAAA22E61CDA565200656FA2 /* ViewController.h */,
-				AAAA22E71CDA565200656FA2 /* ViewController.m */,
 				AAAA22E91CDA565200656FA2 /* Main.storyboard */,
 				AAAA22EC1CDA565200656FA2 /* Assets.xcassets */,
 				AAAA22EE1CDA565200656FA2 /* LaunchScreen.storyboard */,
@@ -77,6 +84,33 @@
 				AAAA22E11CDA565200656FA2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAAA22F71CDA574300656FA2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA22F81CDA577000656FA2 /* UserTableViewController.h */,
+				AAAA22F91CDA577000656FA2 /* UserTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AAAA22FC1CDA57A000656FA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA22FD1CDA57D100656FA2 /* UserTableViewCell.h */,
+				AAAA22FE1CDA57D100656FA2 /* UserTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AAAA23001CDA597D00656FA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA23011CDA59AB00656FA2 /* User.h */,
+				AAAA23021CDA59AB00656FA2 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAA22E81CDA565200656FA2 /* ViewController.m in Sources */,
+				AAAA23031CDA59AB00656FA2 /* User.m in Sources */,
+				AAAA22FF1CDA57D100656FA2 /* UserTableViewCell.m in Sources */,
+				AAAA22FA1CDA577000656FA2 /* UserTableViewController.m in Sources */,
 				AAAA22E51CDA565200656FA2 /* AppDelegate.m in Sources */,
 				AAAA22E21CDA565200656FA2 /* main.m in Sources */,
 			);
