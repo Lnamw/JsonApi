@@ -100,7 +100,8 @@
     User *userForCell = self.usersArray[indexPath.row];
     
         
-        cell.nameLabel.text = userForCell.name;
+        cell.firstNameLabel.text = userForCell.firstName;
+        cell.lastNameLabel.text = userForCell.lastName;
         cell.emailLabel.text = userForCell.email;
         cell.phoneLabel.text = userForCell.phone;
     
