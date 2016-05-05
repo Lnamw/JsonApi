@@ -14,7 +14,6 @@
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *phone;
 
-- (NSString *)firstName:(NSString *)name;
-- (NSString *)lastName:(NSString *)name;
+
 
 @end

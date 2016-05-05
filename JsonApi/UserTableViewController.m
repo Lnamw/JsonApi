@@ -50,11 +50,6 @@
         for (NSDictionary *dict in usersList) {
             User *newUser = [[User alloc]init];
             newUser.name = dict[@"name"];
-            
-            [newUser firstName:newUser.name];
-            
-            
-            
             newUser.email = dict[@"email"];
             newUser.phone = dict[@"phone"];
             
