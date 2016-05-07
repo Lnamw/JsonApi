@@ -52,7 +52,7 @@
     
     MKPointAnnotation *point = [[MKPointAnnotation alloc]init];
     point.coordinate = userlocation;
-    point.title = @"%@ User adress", self.userSelected.name;
+    point.title = [NSString stringWithFormat:@"%@ User adress", self.userSelected.name];
     point.subtitle = @"yeah!";
     [self.mapView addAnnotation:point];
 
