@@ -25,12 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Users";
 
     self.usersArray = [[NSMutableArray alloc] initWithCapacity:0];
     
     [self loadUser];
     
-
 }
 
 
@@ -120,6 +120,7 @@
         cell.lastNameLabel.text = userForCell.lastName;
         cell.emailLabel.text = userForCell.email;
         cell.phoneLabel.text = userForCell.phone;
+    
     
     return cell;
 }

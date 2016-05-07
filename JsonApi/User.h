@@ -25,7 +25,7 @@
 @property (nonatomic, copy)NSString *fullName;
 
 @property (nonatomic, strong) Adress *fullAdress;
-@property (nonatomic, strong) Geo *geo;
+//@property (nonatomic, strong) Geo *geo;
 @property (nonatomic, strong) Company *companyInfo;
 
 

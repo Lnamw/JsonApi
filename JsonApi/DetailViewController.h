@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @class User;
 
 @interface DetailViewController : UIViewController
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *companyNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyCatchPhraseLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyBsLabel;
+
 
 @property (strong, nonatomic) User *userSelected;
 
